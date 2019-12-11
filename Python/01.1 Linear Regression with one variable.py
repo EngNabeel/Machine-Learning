@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #read data
-path = 'Desktop\\ex1data1.txt'
+path = 'C:\\Users\\zahra\\Desktop\\ex1data1.txt'
 data = pd.read_csv(path, header=None, names=['Population', 'Profit'])
 
 
@@ -63,17 +63,13 @@ iters = 1000
 
 # perform gradient descent to "fit" the model parameters
 g, cost = gradientDescent(X, y, theta, alpha, iters)
-#print('g = ' , g)
-#print('cost = ' , cost )
 print('computeCost = ' , computeCost(X, y, g))
-#print('**************************************')
-##=========================================================================
+
+
 ## get best fit line
 x = np.linspace(data.Population.min(), data.Population.max(), 100)
-#print('x \n',x)
-#print('g \n',g)
 f = g[0, 0] + (g[0, 1] * x)
-#print('f \n',f)
+
 
 ## draw the line
 fig, ax = plt.subplots(figsize=(5,5))

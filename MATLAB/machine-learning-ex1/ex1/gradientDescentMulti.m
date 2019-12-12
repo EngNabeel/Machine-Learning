@@ -17,15 +17,9 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
-
-
-
-
-
-
-
-
-
+    errors = (X * theta) - y; % The "errors vector" is the difference between the 'h' vector and the 'y' vector.    
+    theta_change = alpha / m * (X' * errors); % The change in theta is the sum of the product of X and the "errors vector"                        
+    theta = theta - theta_change;
 
     % ============================================================
 
